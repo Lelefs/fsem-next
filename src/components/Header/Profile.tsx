@@ -6,10 +6,11 @@ interface ProfileProps {
   showProfileData: boolean;
 }
 
-export function Profile({ showProfileData = true }) {
+export function Profile({ showProfileData = true }: ProfileProps) {
   return (
     <Flex
       align="center"
+      ml="auto"
     >
       {showProfileData && (
         <Box mr="4" textAlign="right">
