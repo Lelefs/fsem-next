@@ -1,4 +1,6 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, {
+  Html, Head, Main, NextScript,
+} from 'next/document';
 
 export default class MyDocument extends Document {
   render() {
@@ -11,7 +13,6 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
           <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-          <title>Home | FSEM</title>
         </Head>
         <body>
           <Main />
