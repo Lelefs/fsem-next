@@ -1,17 +1,15 @@
-import Head from 'next/head';
 import {
   Box, Button, Divider, Flex, Heading, HStack, SimpleGrid, VStack,
 } from '@chakra-ui/react';
 import { Header } from '../../components/Header';
 import { Sidebar } from '../../components/Sidebar';
 import { Input } from '../../components/Form/Input';
+import { SEO } from '../../components/SEO';
 
 export default function CreateClient() {
   return (
     <Box>
-      <Head>
-        <title>Clientes | FSEM</title>
-      </Head>
+      <SEO title="Criar cliente | FSEM" />
 
       <Header />
 

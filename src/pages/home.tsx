@@ -1,14 +1,12 @@
-import Head from 'next/head';
 import { Flex } from '@chakra-ui/react';
 import { Header } from '../components/Header';
 import { Sidebar } from '../components/Sidebar';
+import { SEO } from '../components/SEO';
 
 export default function Home() {
   return (
     <Flex direction="column" h="100vh">
-      <Head>
-        <title>Home | FSEM</title>
-      </Head>
+      <SEO title="Home | FSEM" />
 
       <Header />
 

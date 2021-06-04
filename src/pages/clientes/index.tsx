@@ -1,17 +1,15 @@
-import Head from 'next/head';
 import {
   Box, Button, Checkbox, Flex, Heading, HStack, Icon, Table, Tbody, Td, Text, Th, Thead, Tr,
 } from '@chakra-ui/react';
 import { RiAddLine, RiDeleteBinLine, RiPencilLine } from 'react-icons/ri';
 import { Header } from '../../components/Header';
 import { Sidebar } from '../../components/Sidebar';
+import { SEO } from '../../components/SEO';
 
 export default function ClientList() {
   return (
     <Box>
-      <Head>
-        <title>Clientes | FSEM</title>
-      </Head>
+      <SEO title="Clientes | FSEM" />
 
       <Header />
 

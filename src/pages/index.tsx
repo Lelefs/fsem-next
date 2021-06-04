@@ -1,13 +1,11 @@
-import Head from 'next/head';
 import { Flex, Button, Stack } from '@chakra-ui/react';
 import { Input } from '../components/Form/Input';
+import { SEO } from '../components/SEO';
 
 export default function SignIn() {
   return (
     <>
-      <Head>
-        <title>Login | FSEM</title>
-      </Head>
+      <SEO title="Login | FSEM" />
       <Flex
         w="100vw"
         h="100vh"
