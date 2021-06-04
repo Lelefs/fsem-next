@@ -18,7 +18,7 @@ export function Sidebar() {
             </Link>
             <Link display="flex" align="center">
               <Icon as={RiContactsLine} fontSize="20" />
-              <Text ml="4" fontWeight="medium">Usuários</Text>
+              <Text ml="4" fontWeight="medium">Clientes</Text>
             </Link>
           </Stack>
         </Box>
