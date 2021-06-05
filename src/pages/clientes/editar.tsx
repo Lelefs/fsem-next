@@ -7,7 +7,7 @@ import { Sidebar } from '../../components/Sidebar';
 import { Input } from '../../components/Form/Input';
 import { SEO } from '../../components/SEO';
 
-export default function CreateClient() {
+export default function EditClient() {
   const router = useRouter();
 
   const handleClick = (e) => {
@@ -17,7 +17,7 @@ export default function CreateClient() {
 
   return (
     <Box>
-      <SEO title="Criar cliente | FSEM" />
+      <SEO title="Editar cliente | FSEM" />
 
       <Header />
 

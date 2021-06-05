@@ -6,7 +6,7 @@ import { SEO } from '../components/SEO';
 export default function Home() {
   return (
     <Flex direction="column" h="100vh">
-      <SEO title="Home | FSEM" />
+      <SEO title="Início | FSEM" />
 
       <Header />
 

@@ -16,6 +16,7 @@ import {
   useBreakpointValue,
 } from '@chakra-ui/react';
 import { RiAddLine, RiDeleteBinLine, RiPencilLine } from 'react-icons/ri';
+import Link from 'next/link';
 import { Header } from '../../components/Header';
 import { Sidebar } from '../../components/Sidebar';
 import { SEO } from '../../components/SEO';
@@ -39,9 +40,11 @@ export default function ClientList() {
           <Flex mb="8" justify="space-between" align="center">
             <Heading size="lg" fontWeight="normal">Clientes</Heading>
 
-            <Button as="a" size="sm" fontSize="sm" colorScheme="green" leftIcon={<Icon as={RiAddLine} fontSize="20" />}>
-              Criar novo
-            </Button>
+            <Link href="/clientes/criar" passHref>
+              <Button as="a" size="sm" fontSize="sm" colorScheme="green" leftIcon={<Icon as={RiAddLine} fontSize="20" />}>
+                Criar novo
+              </Button>
+            </Link>
           </Flex>
 
           <Table colorScheme="whiteAlpha">
@@ -73,9 +76,11 @@ export default function ClientList() {
                 {isWideVersion && <Td>04/06/2021</Td>}
                 <Td>
                   <HStack spacing="4">
-                    <Button as="a" size="sm" fontSize="sm" colorScheme="green">
-                      <Icon as={RiPencilLine} fontSize="16" />
-                    </Button>
+                    <Link href="/clientes/editar" passHref>
+                      <Button as="a" size="sm" fontSize="sm" colorScheme="green">
+                        <Icon as={RiPencilLine} fontSize="16" />
+                      </Button>
+                    </Link>
                     <Button as="a" size="sm" fontSize="sm" colorScheme="red">
                       <Icon as={RiDeleteBinLine} fontSize="16" />
                     </Button>
