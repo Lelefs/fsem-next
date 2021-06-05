@@ -6,6 +6,7 @@ import {
   Heading,
   HStack,
   Icon,
+  Stack,
   Table,
   Tbody,
   Td,
@@ -38,7 +39,10 @@ export default function ClientList() {
 
         <Box flex="1" borderRadius={8} bg="gray.800" p={['4', '4', '8']}>
           <Flex mb="8" justify="space-between" align="center">
-            <Heading size="lg" fontWeight="normal">Clientes</Heading>
+            <Stack spacing="4" align="center" direction="row">
+              <Heading size="lg" fontWeight="normal">Clientes</Heading>
+              <Text color="gray.300">(1)</Text>
+            </Stack>
 
             <Link href="/clientes/criar" passHref>
               <Button as="a" size="sm" fontSize="sm" colorScheme="green" leftIcon={<Icon as={RiAddLine} fontSize="20" />}>
@@ -51,12 +55,10 @@ export default function ClientList() {
             <Thead>
               <Tr>
                 {isWideVersion && (
-                  <Th px="6" color="gray.300" width="8">
-                    <Checkbox colorScheme="green" />
-                  </Th>
+                  <Th color="gray.300" px="6" width="5">#</Th>
                 )}
-                <Th>Cliente</Th>
-                {isWideVersion && <Th>Data de cadastro</Th>}
+                <Th color="gray.300">Cliente</Th>
+                {isWideVersion && <Th color="gray.300">CPF/CNPJ</Th>}
                 <Th w="5" />
               </Tr>
             </Thead>
@@ -64,16 +66,16 @@ export default function ClientList() {
               <Tr>
                 {isWideVersion && (
                   <Td px="6">
-                    <Checkbox colorScheme="green" />
+                    <Text>1</Text>
                   </Td>
                 )}
                 <Td>
                   <Box>
                     <Text fontWeight="bold">Leandro Finochio</Text>
-                    <Text fontSize="sm" color="gray.300">lefinochio@hotmail.com</Text>
+                    <Text fontSize="sm" color="gray.300">1002175, 1002176, 1002177</Text>
                   </Box>
                 </Td>
-                {isWideVersion && <Td>04/06/2021</Td>}
+                {isWideVersion && <Td>123.456.789-01</Td>}
                 <Td>
                   <HStack spacing="4">
                     <Link href="/clientes/editar" passHref>
