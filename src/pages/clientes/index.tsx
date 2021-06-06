@@ -40,12 +40,20 @@ export default function ClientList() {
         <Box flex="1" borderRadius={8} bg="gray.800" p={['4', '4', '8']}>
           <Flex mb="8" justify="space-between" align="center">
             <Stack spacing="4" align="center" direction="row">
-              <Heading size="lg" fontWeight="normal">Clientes</Heading>
+              <Heading size="lg" fontWeight="normal">
+                Clientes
+              </Heading>
               <Text color="gray.300">(1)</Text>
             </Stack>
 
             <Link href="/clientes/criar" passHref>
-              <Button as="a" size="sm" fontSize="sm" colorScheme="green" leftIcon={<Icon as={RiAddLine} fontSize="20" />}>
+              <Button
+                as="a"
+                size="sm"
+                fontSize="sm"
+                colorScheme="green"
+                leftIcon={<Icon as={RiAddLine} fontSize="20" />}
+              >
                 Criar novo
               </Button>
             </Link>
@@ -55,7 +63,9 @@ export default function ClientList() {
             <Thead>
               <Tr>
                 {isWideVersion && (
-                  <Th color="gray.300" px="6" width="5">#</Th>
+                  <Th color="gray.300" px="6" width="5">
+                    #
+                  </Th>
                 )}
                 <Th color="gray.300">Cliente</Th>
                 {isWideVersion && <Th color="gray.300">CPF/CNPJ</Th>}
@@ -72,14 +82,21 @@ export default function ClientList() {
                 <Td>
                   <Box>
                     <Text fontWeight="bold">Leandro Finochio</Text>
-                    <Text fontSize="sm" color="gray.300">1002175, 1002176, 1002177</Text>
+                    <Text fontSize="sm" color="gray.300">
+                      1002175, 1002176, 1002177
+                    </Text>
                   </Box>
                 </Td>
                 {isWideVersion && <Td>123.456.789-01</Td>}
                 <Td>
                   <HStack spacing="4">
                     <Link href="/clientes/editar" passHref>
-                      <Button as="a" size="sm" fontSize="sm" colorScheme="green">
+                      <Button
+                        as="a"
+                        size="sm"
+                        fontSize="sm"
+                        colorScheme="green"
+                      >
                         <Icon as={RiPencilLine} fontSize="16" />
                       </Button>
                     </Link>

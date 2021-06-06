@@ -1,21 +1,37 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "node": true
   },
   "extends": [
-    "airbnb-base"
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:jsx-a11y/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
   ],
+  "globals": {
+    "React": "readonly"
+  },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
     "ecmaVersion": 12,
     "sourceType": "module"
   },
   "plugins": [
-    "@typescript-eslint"
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "prettier"
   ],
   "rules": {
-    "class-methods-use-this": 0,
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "camelcase": 0,
+    "func-names": 0,
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -26,10 +42,24 @@
     ],
     "import/no-extraneous-dependencies": 0,
     "import/prefer-default-export": 0,
-    "no-unused-vars": 0,
-    "react/jsx-one-expression-per-line": 0
+    "no-nested-ternary": 0,
+    "no-shadow": 0,
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".tsx"
+        ]
+      }
+    ],
+    "react/jsx-props-no-spreading": 0,
+    "react/react-in-jsx-scope": 0,
+    "react/require-default-props": 0
   },
   "settings": {
+    "react": {
+      "version": "detect"
+    },
     "import/resolver": {
       "node": {
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
