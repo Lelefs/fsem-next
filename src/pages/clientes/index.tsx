@@ -46,7 +46,7 @@ export default function ClientList() {
               <Text color="gray.300">(1)</Text>
             </Stack>
 
-            <Link href="/clientes/criar" passHref>
+            <Link href="/clientes/criar-editar" passHref>
               <Button
                 as="a"
                 size="sm"
@@ -82,15 +82,18 @@ export default function ClientList() {
                 <Td>
                   <Box>
                     <Text fontWeight="bold">Leandro Finochio</Text>
-                    <Text fontSize="sm" color="gray.300">
-                      1002175, 1002176, 1002177
-                    </Text>
                   </Box>
                 </Td>
                 {isWideVersion && <Td>123.456.789-01</Td>}
                 <Td>
                   <HStack spacing="4">
-                    <Link href="/clientes/editar" passHref>
+                    <Link
+                      href={{
+                        pathname: '/clientes/criar-editar',
+                        query: { name: 'Leandro' },
+                      }}
+                      passHref
+                    >
                       <Button
                         as="a"
                         size="sm"
