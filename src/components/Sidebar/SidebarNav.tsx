@@ -1,4 +1,4 @@
-import { Stack } from '@chakra-ui/react';
+import { Button, Stack } from '@chakra-ui/react';
 import {
   RiBallPenLine,
   RiContactsLine,
@@ -9,10 +9,17 @@ import {
   RiTruckLine,
   RiUser3Line,
 } from 'react-icons/ri';
+import { useRouter } from 'next/router';
 import { NavLink } from './NavLink';
 import { NavSection } from './NavSection';
 
 export function SidebarNav() {
+  const router = useRouter();
+
+  function handleSignOut() {
+    router.push('/');
+  }
+
   return (
     <Stack spacing="8" align="flex-start">
       <NavSection title="GERAL">
@@ -25,7 +32,7 @@ export function SidebarNav() {
       </NavSection>
 
       <NavSection title="LOJA">
-        <NavLink href="/vendas" icon={RiRulerLine}>
+        <NavLink href="/definicao" icon={RiRulerLine}>
           Definição
         </NavLink>
         <NavLink href="/vendas" icon={RiBallPenLine}>
@@ -34,24 +41,30 @@ export function SidebarNav() {
       </NavSection>
 
       <NavSection title="ESCRITÓRIO">
-        <NavLink href="/compras" icon={RiToolsLine}>
+        <NavLink href="/assitenciaTecnica" icon={RiToolsLine}>
           AT
         </NavLink>
         <NavLink href="/compras" icon={RiBallPenLine}>
           Compras
         </NavLink>
-        <NavLink href="/compras" icon={RiTruckLine}>
+        <NavLink href="/entregas" icon={RiTruckLine}>
           Entregas
         </NavLink>
       </NavSection>
 
       <NavSection title="PESSOAL">
-        <NavLink href="/formularios" icon={RiUser3Line}>
+        <NavLink href="/perfil" icon={RiUser3Line}>
           Perfil
         </NavLink>
-        <NavLink href="/automacao" icon={RiLogoutBoxLine}>
+        <Button
+          onClick={handleSignOut}
+          variant="unstyled"
+          pl="8"
+          _hover={{ textDecoration: 'underline' }}
+          type="submit"
+        >
           Sair
-        </NavLink>
+        </Button>
       </NavSection>
     </Stack>
   );
